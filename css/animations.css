@@ -1,0 +1,50 @@
+/* ════════════════════════════════════════════
+   animations.css — Keyframes + scroll reveal
+════════════════════════════════════════════ */
+
+@keyframes fadeUp   { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:none; } }
+@keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+@keyframes slideRight { from { opacity:0; transform:translateX(-24px); } to { opacity:1; transform:none; } }
+@keyframes slideLeft  { from { opacity:0; transform:translateX(24px);  } to { opacity:1; transform:none; } }
+@keyframes scaleIn  { from { opacity:0; transform:scale(0.92); } to { opacity:1; transform:scale(1); } }
+@keyframes float    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+@keyframes pulse    { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.65;transform:scale(1.06)} }
+@keyframes blink    { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes spin     { to { transform:rotate(360deg); } }
+@keyframes spinCC   { to { transform:rotate(-360deg); } }
+@keyframes shimmer  {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes fillBar  { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+@keyframes dotPulse { 0%,100%{box-shadow:0 0 0 0 rgba(0,87,255,0.4)} 50%{box-shadow:0 0 0 6px rgba(0,87,255,0)} }
+@keyframes gridDraw {
+  from { stroke-dashoffset: 600; }
+  to   { stroke-dashoffset: 0;   }
+}
+
+/* ── Scroll reveal ([data-aos]) ── */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+}
+[data-aos].in-view { opacity: 1; transform: none; }
+
+[data-aos="fade-right"] { transform: translateX(-22px); }
+[data-aos="fade-right"].in-view { transform: none; }
+
+[data-aos="fade-left"] { transform: translateX(22px); }
+[data-aos="fade-left"].in-view { transform: none; }
+
+[data-aos="scale"] { transform: scale(0.93); }
+[data-aos="scale"].in-view { transform: scale(1); }
+
+[data-aos-delay="100"] { transition-delay: 0.10s; }
+[data-aos-delay="150"] { transition-delay: 0.15s; }
+[data-aos-delay="200"] { transition-delay: 0.20s; }
+[data-aos-delay="250"] { transition-delay: 0.25s; }
+[data-aos-delay="300"] { transition-delay: 0.30s; }
+[data-aos-delay="350"] { transition-delay: 0.35s; }
+[data-aos-delay="400"] { transition-delay: 0.40s; }
+[data-aos-delay="500"] { transition-delay: 0.50s; }

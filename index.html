@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anjana K — Data Scientist | ML Engineer | Python · SQL · Scikit-learn" />
+  <meta name="author" content="Anjana K" />
+  <meta property="og:title" content="Anjana K | Data Scientist Portfolio" />
+  <meta property="og:description" content="Professional portfolio of Anjana K — Data Scientist specialising in ML, NLP, and financial analytics." />
+  <title>Anjana K | Data Scientist</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS (load order matters) -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">
+          <span>Anjana</span>
+          <span class="nav-logo-dot"></span>
+          <span>K</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about"          class="nav-link">About</a></li>
+          <li><a href="#projects"       class="nav-link">Projects</a></li>
+          <li><a href="#skills"         class="nav-link">Skills</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact"        class="nav-link">Contact</a></li>
+          <li><a href="assets/Anjana_K_resume.pdf" download class="nav-cta">Resume ↓</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Grid lines background -->
+    <div class="hero-grid" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(0,87,255,0.055)" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+        <!-- Diagonal accent lines -->
+        <line x1="0" y1="30%" x2="100%" y2="70%" stroke="rgba(0,87,255,0.04)" stroke-width="1"/>
+        <line x1="20%" y1="0" x2="80%" y2="100%" stroke="rgba(245,158,11,0.04)" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="hero-blob blob-1" aria-hidden="true"></div>
+    <div class="hero-blob blob-2" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Text side -->
+        <div class="hero-text">
+          <div class="hero-badge" data-aos>
+            <span class="hero-badge-dot"></span>
+            Available for opportunities
+          </div>
+
+          <h1 class="hero-name">
+            <span class="hero-greeting">Hi, I'm</span>
+            <span class="hero-name-accent">Anjana K</span>
+          </h1>
+
+          <div class="hero-title">
+            <span id="heroTypewriter"></span><span class="tw-cursor">|</span>
+            <span class="hero-title-divider"></span>
+            <span>Data Scientist</span>
+          </div>
+
+          <p class="hero-desc">
+            MSc Mathematics → Banking Analytics → Machine Learning. I build interpretable, production-ready ML models that turn messy data into decisions that matter.
+          </p>
+
+          <div class="hero-actions" data-aos data-aos-delay="200">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></svg>
+              View Projects
+            </a>
+            <a href="assets/Anjana_K_resume.pdf" download class="btn btn-outline">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Resume
+            </a>
+            <a href="#contact" class="btn btn-ghost">Contact</a>
+          </div>
+
+          <div class="hero-socials" data-aos data-aos-delay="300">
+            <a href="https://github.com/ANJANA-K-HUB" target="_blank" rel="noreferrer" class="social-icon-btn" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/anjana28/" target="_blank" rel="noreferrer" class="social-icon-btn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:anjanaharidasan28@gmail.com" class="social-icon-btn" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+            </a>
+            </div>
+        </div>
+
+        <!-- Profile card -->
+        <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
+          <div class="profile-card">
+            <div class="profile-img-wrap">
+              <div class="profile-img-ring"></div>
+              <div class="profile-img-ring-inner"></div>
+              <div class="profile-img">
+                <!--
+                  TO ADD YOUR PHOTO:
+                  1. Save your photo as assets/img/profile.jpg
+                  2. Replace the <div class="profile-initials"> below with:
+                     <img src="assets/img/profile.jpg" alt="Anjana K" />
+                -->
+                     <img src="assets/img/profile.jpg" alt="Anjana K" />
+              </div>
+            </div>
+
+            <div class="profile-name">Anjana K</div>
+            <div class="profile-role">Data Scientist · ML Engineer</div>
+
+            <div class="profile-stats">
+              <div class="profile-stat">
+                <div class="ps-num">11+</div>
+                <div class="ps-label">Projects</div>
+              </div>
+              <div class="profile-stat">
+                <div class="ps-num">3.5y</div>
+                <div class="ps-label">Analytics</div>
+              </div>
+              <div class="profile-stat">
+                <div class="ps-num">7</div>
+                <div class="ps-label">Certs</div>
+              </div>
+            </div>
+
+            <div class="profile-available">
+              <span class="avail-dot"></span>
+              Open to opportunities
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /hero-inner -->
+    </div><!-- /container -->
+
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-hint-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section class="section bg-alt" id="about">
+    <div class="container">
+      <span class="section-tag">// 01 — About</span>
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="section-rule"></div>
+
+      <div class="about-inner">
+        <!-- Left: Bio -->
+        <div data-aos="fade-right">
+          <p class="about-bio-lead">
+            MSc Mathematics · <span>Aspiring Data Scientist</span> · Open to Opportunities
+          </p>
+          <p class="about-bio-text">
+            I am a Mathematics postgraduate with 3.5 years of hands-on experience analysing financial data at South Indian Bank — working with 200+ customer portfolios, flagging risk patterns, and building reports that directly supported business decisions using SQL and Excel. That real-world exposure shaped how I think about data: not just numbers, but stories that drive action.
+          </p>
+          <p class="about-bio-text">
+            Passionate about Data Science, I have built 11+ end-to-end ML projects in Python spanning classification, NLP, deep learning, and computer vision — each solving a real problem. I am currently completing a Diploma in Data Science and actively looking for a Data Scientist role where I can contribute, learn, and grow from day one.
+          </p>
+          <div class="about-open-badge">
+            <span class="open-dot"></span>
+            <span>Actively seeking Data Science roles · Open to full-time &amp; internship opportunities</span>
+          </div>
+          <div class="about-chips">
+            <span class="chip">Python</span>
+            <span class="chip">Scikit-learn</span>
+            <span class="chip">TensorFlow</span>
+            <span class="chip">NLP · NLTK</span>
+            <span class="chip">OpenCV</span>
+            <span class="chip">Power BI</span>
+            <span class="chip-amber chip">Feature Engineering</span>
+            <span class="chip-amber chip">Financial Analytics</span>
+          </div>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:0.5rem;">
+            <a href="assets/Anjana_K_resume.pdf" download class="btn btn-primary">
+              Download CV
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/anjana28/" target="_blank" rel="noreferrer" class="btn btn-outline">
+              LinkedIn Profile
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Timeline -->
+        <div data-aos="fade-left" data-aos-delay="150">
+          <!-- Education -->
+          <div class="timeline-group">
+            <div class="tl-heading">Education</div>
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-dot tl-dot-filled"></div>
+                <span class="tl-date">Sep 2025 – Mar 2026</span>
+                <h4>Diploma in Data Science</h4>
+                <p>Edure Learning, Kochi</p>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <span class="tl-date">2019 – 2021</span>
+                <h4>MSc Mathematics</h4>
+                <p>St Thomas College (Autonomous), Thrissur</p>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <span class="tl-date">2016 – 2019</span>
+                <h4>BSc Mathematics</h4>
+                <p>Vimala College (Autonomous), Thrissur</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div class="timeline-group">
+            <div class="tl-heading">Experience</div>
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-dot tl-dot-filled"></div>
+                <span class="tl-date">Aug 2021 – Mar 2025</span>
+                <h4>Customer Service Associate</h4>
+                <p>South Indian Bank · Malappuram, Kerala</p>
+                <ul class="tl-bullets">
+                  <li>Analysed 200+ customer portfolios via SQL &amp; Excel</li>
+                  <li>KYC/CDD anomaly detection on 40+ records/week (+10–15% efficiency)</li>
+                  <li>Built analytical reports driving data-driven retention strategy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROJECT DETAIL MODAL
+  ══════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-header">
+        <span class="modal-icon" id="modalIcon"></span>
+        <div>
+          <div class="modal-badge" id="modalBadge"></div>
+          <h2 class="modal-title" id="modalTitle"></h2>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-label">🎯 Objective</div>
+        <p class="modal-text" id="modalObjective"></p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-label">📋 About the Project</div>
+        <p class="modal-text" id="modalAbout"></p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-label">⚙️ Approach</div>
+        <ul class="modal-list" id="modalApproach"></ul>
+      </div>
+      <div class="modal-section">
+        <div class="modal-label">🛠️ Tech Stack</div>
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary" id="modalGithub" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <span class="section-tag">// 02 — Projects</span>
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <div class="section-rule"></div>
+      <p class="projects-hint">Click any project card to view full details</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card" data-aos data-aos-delay="0" onclick="openModal('credit')" role="button" tabindex="0">
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="card-icon">💳</span>
+              <h3 class="card-title">Credit Risk Analysis</h3>
+            </div>
+            <span class="card-badge">74.8% Accuracy</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80" alt="Credit Risk" class="card-img" />
+          <p class="card-desc">End-to-end credit risk prediction on the German Credit dataset — EDA, feature engineering, PCA, and ensemble models deployed via Tkinter GUI.</p>
+          <div class="card-tags"><span class="tag">Scikit-learn</span><span class="tag">PCA</span><span class="tag">GridSearchCV</span><span class="tag">SVM</span></div>
+          <div class="card-click-hint">Click to view details →</div>
+        </div>
+
+        <div class="project-card" data-aos data-aos-delay="100" onclick="openModal('image')" role="button" tabindex="0">
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="card-icon">🖼️</span>
+              <h3 class="card-title">Image Classification</h3>
+            </div>
+            <span class="card-badge">83.75% Accuracy</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&q=80" alt="Image Classification" class="card-img" />
+          <p class="card-desc">Supervised SVM-based computer vision classifier using OpenCV for preprocessing and feature extraction, evaluated with confusion matrix metrics.</p>
+          <div class="card-tags"><span class="tag">OpenCV</span><span class="tag">SVM</span><span class="tag">Scikit-learn</span><span class="tag">Computer Vision</span></div>
+          <div class="card-click-hint">Click to view details →</div>
+        </div>
+
+        <div class="project-card" data-aos data-aos-delay="200" onclick="openModal('twitter')" role="button" tabindex="0">
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="card-icon">🐦</span>
+              <h3 class="card-title">Twitter Sentiment Analysis</h3>
+            </div>
+            <span class="card-badge card-badge-amber">NLP · TF-IDF</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&q=80" alt="Sentiment Analysis" class="card-img" />
+          <p class="card-desc">Multi-class sentiment classifier with TF-IDF features and a full NLP preprocessing pipeline on noisy real-world Twitter data.</p>
+          <div class="card-tags"><span class="tag">NLTK</span><span class="tag">TF-IDF</span><span class="tag">NLP</span><span class="tag">Scikit-learn</span></div>
+          <div class="card-click-hint">Click to view details →</div>
+        </div>
+
+        <div class="project-card" data-aos data-aos-delay="0" onclick="openModal('attrition')" role="button" tabindex="0">
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="card-icon">👥</span>
+              <h3 class="card-title">Employee Attrition Prediction</h3>
+            </div>
+            <span class="card-badge card-badge-amber">HR Analytics</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&q=80" alt="Employee Attrition" class="card-img" />
+          <p class="card-desc">ML pipeline predicting employee attrition from HR data with feature importance analysis and interpretable model outputs for HR decisions.</p>
+          <div class="card-tags"><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">Seaborn</span><span class="tag">Python</span></div>
+          <div class="card-click-hint">Click to view details →</div>
+        </div>
+
+        <div class="project-card" data-aos data-aos-delay="100" onclick="openModal('emotions')" role="button" tabindex="0">
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="card-icon">😊</span>
+              <h3 class="card-title">Emotions in Text</h3>
+            </div>
+            <span class="card-badge">Multi-label NLP</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=400&q=80" alt="Emotions in Text" class="card-img" />
+          <p class="card-desc">Emotion detection model classifying joy, sadness, anger, and fear from text using classical ML classifiers and NLP feature engineering.</p>
+          <div class="card-tags"><span class="tag">NLTK</span><span class="tag">NLP</span><span class="tag">Scikit-learn</span><span class="tag">Python</span></div>
+          <div class="card-click-hint">Click to view details →</div>
+        </div>
+
+        <div class="project-card" data-aos data-aos-delay="200" onclick="openModal('customer')" role="button" tabindex="0">
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="card-icon">🛒</span>
+              <h3 class="card-title">Customer Behaviour Classification</h3>
+            </div>
+            <span class="card-badge card-badge-amber">Segmentation</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&q=80" alt="Customer Behaviour" class="card-img" />
+          <p class="card-desc">E-commerce customer segmentation pipeline classifying users and predicting purchasing intent from transactional data.</p>
+          <div class="card-tags"><span class="tag">Pandas</span><span class="tag">EDA</span><span class="tag">Scikit-learn</span><span class="tag">Python</span></div>
+          <div class="card-click-hint">Click to view details →</div>
+        </div>
+
+        <div class="project-card" data-aos data-aos-delay="0" onclick="openModal('cotton')" role="button" tabindex="0">
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="card-icon">🌿</span>
+              <h3 class="card-title">Cotton Plant Disease Classification</h3>
+            </div>
+            <span class="card-badge">Deep Learning</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=400&q=80" alt="Cotton Plant Disease" class="card-img" />
+          <p class="card-desc">CNN-based deep learning model that classifies cotton plant diseases from leaf images, enabling early detection to support precision agriculture.</p>
+          <div class="card-tags"><span class="tag">TensorFlow</span><span class="tag">CNN</span><span class="tag">Keras</span><span class="tag">Image Classification</span></div>
+          <div class="card-click-hint">Click to view details →</div>
+        </div>
+
+        <div class="project-card" data-aos data-aos-delay="100" onclick="openModal('facemask')" role="button" tabindex="0">
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="card-icon">😷</span>
+              <h3 class="card-title">Face Mask Detection</h3>
+            </div>
+            <span class="card-badge">Real-time Detection</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1584634731339-252c581abfc5?w=400&q=80" alt="Face Mask Detection" class="card-img" />
+          <p class="card-desc">Real-time face mask detection system using deep learning and OpenCV to identify whether a person is wearing a mask in live video or images.</p>
+          <div class="card-tags"><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">CNN</span><span class="tag">Keras</span></div>
+          <div class="card-click-hint">Click to view details →</div>
+        </div>
+
+        <div class="project-card" data-aos data-aos-delay="200" onclick="openModal('hurricane')" role="button" tabindex="0">
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="card-icon">🌪️</span>
+              <h3 class="card-title">Hurricane Damage Classification</h3>
+            </div>
+            <span class="card-badge card-badge-amber">Satellite Imagery</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1468078809804-4c7b3e60a478?w=400&q=80" alt="Hurricane Damage" class="card-img" />
+          <p class="card-desc">Deep learning model classifying satellite images to detect hurricane-damaged infrastructure, supporting disaster response and relief operations.</p>
+          <div class="card-tags"><span class="tag">TensorFlow</span><span class="tag">CNN</span><span class="tag">Keras</span><span class="tag">Satellite Imagery</span></div>
+          <div class="card-click-hint">Click to view details →</div>
+        </div>
+
+        <div class="project-card" data-aos data-aos-delay="0" onclick="openModal('movie')" role="button" tabindex="0">
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="card-icon">🎬</span>
+              <h3 class="card-title">Movie Review Sentiment Classification</h3>
+            </div>
+            <span class="card-badge">Bi-LSTM · NLP</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&q=80" alt="Bidirectional LSTM" class="card-img" />
+          <p class="card-desc">Deep learning model using Bidirectional LSTM to classify sentiment from text, capturing context from both directions for improved accuracy.</p>
+          <div class="card-tags"><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">Bi-LSTM</span><span class="tag">NLP</span></div>
+          <div class="card-click-hint">Click to view details →</div>
+        </div>
+
+        <div class="project-card" data-aos data-aos-delay="100" onclick="openModal('satellite')" role="button" tabindex="0">
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="card-icon">🛰️</span>
+              <h3 class="card-title">Satellite Image Classification</h3>
+            </div>
+            <span class="card-badge card-badge-amber">Remote Sensing</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&q=80" alt="Satellite Image" class="card-img" />
+          <p class="card-desc">Deep learning model classifying land use and land cover from satellite imagery — identifying urban areas, forests, water bodies, and agricultural zones.</p>
+          <div class="card-tags"><span class="tag">TensorFlow</span><span class="tag">CNN</span><span class="tag">Keras</span><span class="tag">Remote Sensing</span></div>
+          <div class="card-click-hint">Click to view details →</div>
+        </div>
+
+      </div>
+
+      <div class="projects-more" data-aos data-aos-delay="200">
+        <a href="https://github.com/ANJANA-K-HUB?tab=repositories" target="_blank" class="btn btn-ghost">
+          View All Repositories →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════ -->
+  <section class="section bg-alt" id="skills">
+    <div class="container">
+      <span class="section-tag">// 03 — Skills</span>
+      <h2 class="section-title">Technical <span>Proficiencies</span></h2>
+      <div class="section-rule"></div>
+
+      <div class="skills-tabs" data-aos>
+        <button class="skill-tab active" data-tab="programming">Programming</button>
+        <button class="skill-tab" data-tab="ml">ML / AI</button>
+        <button class="skill-tab" data-tab="data">Data Tools</button>
+        <button class="skill-tab" data-tab="concepts">Concepts</button>
+      </div>
+
+      <div class="skills-panel active" id="tab-programming" data-aos data-aos-delay="100">
+        <div class="skill-bars">
+          <div class="skill-bar-item"><div class="sb-meta"><span>Python</span><span class="sb-pct">92%</span></div><div class="sb-track"><div class="sb-fill" style="--w:0.92"></div></div></div>
+          <div class="skill-bar-item"><div class="sb-meta"><span>SQL / MySQL</span><span class="sb-pct">88%</span></div><div class="sb-track"><div class="sb-fill" style="--w:0.88"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skills-panel" id="tab-ml" data-aos data-aos-delay="100">
+        <div class="skill-bars">
+          <div class="skill-bar-item"><div class="sb-meta"><span>Scikit-learn</span><span class="sb-pct">90%</span></div><div class="sb-track"><div class="sb-fill" style="--w:0.90"></div></div></div>
+          <div class="skill-bar-item"><div class="sb-meta"><span>NLP / NLTK</span><span class="sb-pct">78%</span></div><div class="sb-track"><div class="sb-fill" style="--w:0.78"></div></div></div>
+          <div class="skill-bar-item"><div class="sb-meta"><span>TensorFlow / Keras</span><span class="sb-pct">72%</span></div><div class="sb-track"><div class="sb-fill" style="--w:0.72"></div></div></div>
+          <div class="skill-bar-item"><div class="sb-meta"><span>OpenCV</span><span class="sb-pct">80%</span></div><div class="sb-track"><div class="sb-fill" style="--w:0.80"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skills-panel" id="tab-data" data-aos data-aos-delay="100">
+        <div class="skill-bars">
+          <div class="skill-bar-item"><div class="sb-meta"><span>Pandas / NumPy</span><span class="sb-pct">94%</span></div><div class="sb-track"><div class="sb-fill" style="--w:0.94"></div></div></div>
+          <div class="skill-bar-item"><div class="sb-meta"><span>Matplotlib / Seaborn</span><span class="sb-pct">88%</span></div><div class="sb-track"><div class="sb-fill" style="--w:0.88"></div></div></div>
+          <div class="skill-bar-item"><div class="sb-meta"><span>Power BI</span><span class="sb-pct">80%</span></div><div class="sb-track"><div class="sb-fill" style="--w:0.80"></div></div></div>
+          <div class="skill-bar-item"><div class="sb-meta"><span>Excel</span><span class="sb-pct">85%</span></div><div class="sb-track"><div class="sb-fill" style="--w:0.85"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skills-panel" id="tab-concepts" data-aos data-aos-delay="100">
+        <div class="skill-pill-grid">
+          <span class="skill-pill">Feature Engineering</span>
+          <span class="skill-pill">Exploratory Data Analysis</span>
+          <span class="skill-pill">PCA</span>
+          <span class="skill-pill">Hyperparameter Tuning</span>
+          <span class="skill-pill">GridSearchCV</span>
+          <span class="skill-pill">Cross-Validation</span>
+          <span class="skill-pill">Statistical Analysis</span>
+          <span class="skill-pill">Image Processing</span>
+          <span class="skill-pill">Precision / Recall / F1</span>
+          <span class="skill-pill">Financial Risk Modelling</span>
+          <span class="skill-pill">Anomaly Detection</span>
+          <span class="skill-pill">Model Deployment</span>
+          <span class="skill-pill">Data Cleaning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CERTIFICATIONS
+  ══════════════════════════════════════ -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <span class="section-tag">// 04 — Certifications</span>
+      <h2 class="section-title">My <span>Certifications</span></h2>
+      <div class="section-rule"></div>
+      <p class="cert-page-sub">Click on any certificate to view it full size.</p>
+
+      <div class="cert-cards-grid">
+
+        <div class="cert-card" data-aos data-aos-delay="0">
+          <div class="cert-img-wrap">
+            <!--
+              TO ADD CERTIFICATE IMAGE:
+              Save as assets/img/cert-ibm-1.jpg and replace the placeholder below:
+              <img src="assets/img/cert-ibm-1.jpg" alt="Data Analysis with Python" />
+            -->
+             <img src="assets/img/DA with python.jpg" alt="Data Analysis with Python" />
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-card-issuer ibm">IBM</div>
+            <h4 class="cert-card-name">Data Analysis with Python</h4>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos data-aos-delay="80">
+          <div class="cert-img-wrap">
+             <img src="assets/img/Data visualisation.jpg" alt="Data Visualisation with Python" />
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-card-issuer ibm">IBM</div>
+            <h4 class="cert-card-name">Data Visualization with Python</h4>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos data-aos-delay="160">
+          <div class="cert-img-wrap">
+             <img src="assets/img/IBM badge.jpg" alt="Applied Data Science with Python" />
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-card-issuer ibm">IBM</div>
+            <h4 class="cert-card-name">Applied Data Science with Python</h4>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos data-aos-delay="0">
+          <div class="cert-img-wrap">
+             <img src="assets/img/Power bi desktop.jpg" alt="Power BI Desktop" />
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-card-issuer linkedin">LinkedIn</div>
+            <h4 class="cert-card-name">Power BI Desktop</h4>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos data-aos-delay="80">
+          <div class="cert-img-wrap">
+             <img src="assets/img/dax modelling.jpg" alt="Power BI Data Modelling with DAX" />
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-card-issuer linkedin">LinkedIn</div>
+            <h4 class="cert-card-name">Power BI Data Modeling with DAX</h4>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos data-aos-delay="160">
+          <div class="cert-img-wrap">
+             <img src="assets/img/Excel for da.jpg" alt="Excel for Data Analysis" />
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-card-issuer linkedin">LinkedIn</div>
+            <h4 class="cert-card-name">Excel for Data Analysis</h4>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos data-aos-delay="80">
+          <div class="cert-img-wrap">
+             <img src="assets/img/Sql server.jpg" alt="SQL Server for Data Analysis" />
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-card-issuer alison">Alison</div>
+            <h4 class="cert-card-name">SQL Server for Data Analysis</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate lightbox -->
+  <div class="cert-lightbox" id="certLightbox">
+    <button class="cert-lightbox-close" id="certLightboxClose">✕</button>
+    <img id="certLightboxImg" src="" alt="Certificate" />
+  </div>
+  <section class="section" id="contact">
+    <div class="container">
+      <span class="section-tag">// 05 — Contact</span>
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <div class="section-rule"></div>
+
+      <div class="contact-grid">
+        <div data-aos="fade-right">
+          <p class="contact-tagline">
+            Open to Data Science roles, internships &amp; ML collaborations.
+          </p>
+          <p class="contact-sub">
+            I respond within 24 hours. Whether it's a job opportunity, a project idea, or just a data science chat — reach out.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:anjanaharidasan28@gmail.com" class="contact-link">
+              <div class="cl-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <div class="cl-label">Email</div>
+                <div class="cl-value">anjanaharidasan28@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/anjana28/" target="_blank" class="contact-link">
+              <div class="cl-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <div class="cl-label">LinkedIn</div>
+                <div class="cl-value">linkedin.com/in/anjana28</div>
+              </div>
+            </a>
+            <a href="https://github.com/ANJANA-K-HUB" target="_blank" class="contact-link">
+              <div class="cl-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </div>
+              <div>
+                <div class="cl-label">GitHub</div>
+                <div class="cl-value">github.com/ANJANA-K-HUB</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="150">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" placeholder="Role / Collaboration / Other" />
+            </div>
+            <div class="form-group">
+              <label for="fmsg">Message</label>
+              <textarea id="fmsg" rows="5" placeholder="Hi Anjana, I'd love to discuss..."></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                Send Message
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
+              </button>
+            </div>
+            <div class="form-success" id="formSuccess">✓ Message received — I'll respond within 24 hours!</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span>Anjana</span>
+          <span class="footer-logo-accent">·</span>
+          <span>K</span>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-copy">© 2025 Anjana K · Data Scientist</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/navbar.js"></script>
+  <script src="js/typewriter.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/modal.js"></script>
+</body>
+</html>
